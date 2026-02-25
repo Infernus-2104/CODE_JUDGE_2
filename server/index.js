@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -5,6 +6,7 @@ const bodyParser = require("body-parser");
 
 const submissionRoute = require("./routes/submission");
 const problemRoute = require("./routes/problem");
+const aiRoute = require("./routes/ai");
 
 const app = express();
 
@@ -18,6 +20,7 @@ mongoose
 
 app.use("/api", problemRoute);
 app.use("/api", submissionRoute);
+app.use("/api/ai", aiRoute);
 
 app.listen(5000, () => {
   console.log("Server running on port 5000");
