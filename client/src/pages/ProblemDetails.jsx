@@ -25,7 +25,7 @@ function ProblemDetails() {
   };
 
   const submitCode = async () => {
-    const res = await API.post("/submit", {
+    const res = await API.post("/submissions/submit", {
       problemId: id,
       code,
       language,
