@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/codejudge
+
+server:
+  port: 5000
+
+gemini:
+  api-key: AIzaSyCYOUu-hJvjS8K_7sbdfJfBCAw6jDqSK7Q
